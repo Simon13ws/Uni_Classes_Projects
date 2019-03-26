@@ -1,0 +1,13 @@
+4
+Stranger things
+Drama, fantasy, horror
+14 2 17 19 0
+Game of thrones
+Fantasy, drama
+18 7 67 2 1
+13 reasons why
+Drama
+16 2 26 244 2
+Breaking Bad
+dramat
+17 5 62 3 0
