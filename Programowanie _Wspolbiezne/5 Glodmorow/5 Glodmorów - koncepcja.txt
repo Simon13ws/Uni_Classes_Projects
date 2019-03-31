@@ -1,0 +1,9 @@
+Do rozwi¹zania problemu pos³u¿ono siê dodatkowym procesem, tzw. Kelnerem, który kontroluje, który z g³odomorów mo¿e w danej chwili jeœæ. 
+Projekt sk³ada siê z 6 jednostek programowych (tak naprawdê 2 ró¿nych, ale ka¿dego z g³odomorów podzieli³em na osobny). 
+Ka¿dy g³odomor posiada swój indeks od 0 do 4.
+Wspólnym zasobem jest tablica intów o nazwie "buf". W niej, w pierwszych jej polach przechowywana jest informacja ile dany g³odomor zjad³ dotychczas, potem informacja czy dany g³odomor bêdzie jeszcze jad³, a na koñcu w 2 ostatnich polach, którzy g³odmorzy w danej chwili jedz¹ (bo maksymalnie 2 naraz mo¿e jeœæ).
+Przy pomocy kolejki komunikatów ka¿dy z g³odomorów czeka na informacjê czy mo¿e jeœæ. Tê informacjê wysy³a kelner, który priorytetowo wybiera g³odomora co zjad³ najmniej, a nastêpnie wybiera drugiego spoœród mo¿liwych, tak aby nie dosz³o do kolizji miêdzy g³odomorami (te¿ priorytetuj¹c tego, który zjad³ mniej). Kelner wysy³a informacjê z indeksem danego g³odmora, który ma pozwolenie na zjedzenie.
+Po zjedzeniu g³odmorzy wysy³aj¹ informacjê zwrotn¹ do kelnera.
+Kelner patrzy równie¿, czy dany g³odomor jeszcze bêdzie jad³ - oni w ostatniej iteracji swojej pêtli informuj¹ o koñcu jedzenia - jeœli skoñczy³, to kelner ignoruje go przy wyborze kolejncych g³odmorów, którym pozwoli jeœæ. 
+
+Ca³y projekt w³¹czany jest programem "test".

@@ -1,0 +1,9 @@
+Rozwi¹zanie jest w formie wie¿ lotniczych, które komunikuj¹ siê, aby samolot móg³ wyl¹dowaæ albo wylecieæ z lotniskowca.
+Program jest podzielony na dwie funkcje, z których jedna jest wykonywana przez dany w¹tek: l¹dowanie i wylatywanie.
+W programie mamy 4 w¹tki, 2 z nich zajmuj¹ siê l¹dowaniem - s¹ to 2 wie¿e od l¹dowania, a pozosta³e 2 to wie¿e od wylatywania. Ka¿dy z nich wpuszcza/wypuszcza okreœlon¹ liczbê samolotów (liczba iteracji w pêtli wewn¹trz danej funkcji).
+
+Zasobem wspólnym jest miejsce na lotnisku o ograniczonej iloœci.
+W roli mutexu jest pas startowy, który mo¿e byæ u¿ywany tylko przez jedn¹ z wie¿ w danym momencie. Jak dwa samoloty chc¹ l¹dowaæ albo wylecieæ, to ten który bêdzie pierwszy ma priorytet, a drugi czeka.
+Priorytet maj¹ samoloty l¹duj¹ce - informacja, ¿e bêd¹ jeszcze samoloty, które bêd¹ l¹dowaæ znajduje siê w zmiennej "jeszcze[]" - ka¿da z wie¿ od l¹dowania ma osobny indeks tablicy dla siebie.
+Na podstawie tej zmiennej wie¿e od wylatywania wiedz¹, ¿e maj¹ czekaæ.
+Jeœli lotniskowiec jest pe³en, wie¿a od l¹dowania czeka i daje sygna³ do wie¿y od wylatywania, ¿e jeden samolot mo¿e wylecieæ. 
